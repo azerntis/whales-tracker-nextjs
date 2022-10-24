@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Table, Input, Button, Space, Tooltip } from "antd";
-import Highlighter from "react-highlight-words";
 import {
   SearchOutlined,
   CopyOutlined,
@@ -127,14 +126,7 @@ const BuyTable = ({ data, period, loading, getPeriodLabel, darkMode }) => {
     render: (text) =>
       searchedColumn === dataIndex ? (
         <div style={{ display: "flex", width: "100%" }}>
-          <span style={{ width: "80%" }}>
-            <Highlighter
-              highlightStyle={{ backgroundColor: "#ffc069", padding: 0 }}
-              searchWords={[searchText]}
-              autoEscape
-              textToHighlight={text ? text.toString() : ""}
-            />
-          </span>
+          <span style={{ width: "80%" }}></span>
           <div style={{ width: "20%" }}>
             <Tooltip placement="top" title="Copy to clipboard">
               <Button
