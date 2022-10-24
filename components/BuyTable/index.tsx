@@ -76,7 +76,7 @@ const BuyTable = ({ data, period, loading, getPeriodLabel, darkMode }) => {
       <div style={{ padding: 8 }}>
         <Input
           ref={(node) => {
-            setSearchInput(node);
+            // setSearchInput(node);
           }}
           placeholder={
             dataIndex === "address" ? `Search address` : `Search tx hash`
@@ -120,13 +120,13 @@ const BuyTable = ({ data, period, loading, getPeriodLabel, darkMode }) => {
         : "",
     onFilterDropdownVisibleChange: (visible) => {
       if (visible) {
-        setTimeout(() => searchInput.select(), 100);
+        setTimeout(() => searchInput?.select(), 100);
       }
     },
     render: (text) =>
       searchedColumn === dataIndex ? (
         <div style={{ display: "flex", width: "100%" }}>
-          <span style={{ width: "80%" }}></span>
+          <span style={{ width: "80%" }}>{text}</span>
           <div style={{ width: "20%" }}>
             <Tooltip placement="top" title="Copy to clipboard">
               <Button
