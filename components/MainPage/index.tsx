@@ -300,13 +300,13 @@ const MainPage = () => {
           >
             Load Data
           </Button>
-          <Switch
+          {/* <Switch
             className={darkMode ? "switch-color" : ""}
             checkedChildren="🌞"
             unCheckedChildren="🌙"
             checked={darkMode}
             onChange={() => setDarkMode(!darkMode)}
-          />
+          /> */}
         </div>
         <div style={{ marginTop: "20px" }}>
           <Row gutter={16}>
